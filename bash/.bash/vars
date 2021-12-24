@@ -1,0 +1,6 @@
+#!/bin/bash 
+
+export XDG_CONFIG_HOME=$HOME/.config
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+export PS1="\[\033[38;5;3m\]\u\[$(tput sgr0)\]\[\033[38;5;10m\]@\[$(tput sgr0)\]\[\033[38;5;3m\]\H\[$(tput sgr0)\]\[\033[38;5;5m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;2m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\\$ \[$(tput sgr0)\]\]"

@@ -1,0 +1,45 @@
+#/bin/bash
+
+# This script automaticly connects me trought ssh
+# to one of the servers(public *nix-es)
+
+HOST=""
+USER=ayko
+KEY=~/.ssh/cosmicVoyage
+
+
+if [ -z ${1+x} ]
+then
+  echo "pnix [nix]"
+  echo "c - cosmic.voyage"
+  echo "t - tilde.team"
+  echo "i - tilde.institute"
+  echo "e - envs.net"
+else
+  if [[($1 == "c" )]]
+  then
+    HOST=cosmic.voyage
+   elif [[($1 == "t" )]]
+   then 
+    HOST=tilde.team
+   elif [[($1 == "e" )]]
+   then 
+    HOST=envs.net
+    USER=arydev
+   elif [[($1 == "i" )]]
+   then
+    HOST=tilde.institute
+   else
+    echo "pnix [nix]"
+    echo "c - cosmic.voyage"
+    echo "t - tilde.team"
+    echo "i - tilde.institute"
+    echo "e - envs.net"
+  fi  
+ fi
+ 
+ 
+ ssh -i $KEY $USER@$HOST
+
+
+
