@@ -7,6 +7,7 @@ alias v=vim
 alias c='clear'
 alias tree='tree --dirsfirst -F'
 alias mkdir='mkdir -p -v'
+alias ex='exit'
 
 alias ls='ls --sort=extension --color=auto'
 alias ll='ls -lh'
@@ -33,6 +34,9 @@ alias make='clear && make'
 alias m='make'
 
 # Quickly load bashrc
+
+
+
 alias gogo='source ~/.bashrc'
 
 # Cool colors for man pages
@@ -50,3 +54,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 
+#----- FUN -----#
+alias wttr='curl wttr.in'
+alias crypp='curl rate.sx'
+alias cs='curl cheat.sh'
+
+## DICTIONARY: [ curl 'dict://dict.org/d:SEARCH_TERM' ]
